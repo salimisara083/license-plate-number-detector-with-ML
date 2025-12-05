@@ -1,0 +1,2 @@
+This program takes hundreds of classified images of the numbers from 1 to 10 and after processing them with opencv and creting a numpy array dataset , it scales the dataset and feds the dataset to logistic regression model .
+After training the model , it takes a sample license plate crops the individual numbers on the license plate by detecting the fully white columns of pixels as borders between numbers and creates a dataset of them and predicts the results with the trained model.
