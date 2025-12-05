@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 
 #reading all the images of a specific number(folder)
 def read_all_imgs(num): 
-    folder_path = r"C:\Users\lenovo\10mlprojects\pelak\dataset" + f"\\{num}"
+    folder_path = r"dataset" + f"\\{num}"
     file_names = os.listdir(folder_path)
     return file_names
 
@@ -15,7 +15,7 @@ def create_dataset_segments(num):
     files = read_all_imgs(num)
     imgs = [] 
     for i in range(0, len(files)):
-        img = cv2.imread(r"C:\Users\lenovo\10mlprojects\pelak\dataset"+ f"\\{num}\\" + files[i])
+        img = cv2.imread(r"dataset"+ f"\\{num}\\" + files[i])
         img_resized = cv2.resize(img, (8, 32))
         img_gray = cv2.cvtColor(img_resized, cv2.COLOR_BGR2GRAY)
         img_flattened = img_gray.flatten()
@@ -46,3 +46,4 @@ def clean_scale_dataset(dataset, labels):
     x_train_scaled = scaler.fit_transform(x_train)
     x_test_scaled = scaler.transform(x_test)
     return x_train_scaled, x_test_scaled, y_train, y_test
+
