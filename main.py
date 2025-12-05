@@ -1,7 +1,7 @@
 from dataset import *
 from model import Model
 from pelak import Pelak
-PATH = r"C:\Users\lenovo\10mlprojects\pelak\dataset\pelak.png"
+PATH = r"pelak.png"
 
 def main():
     x_train_scaled, x_test_scaled, y_train, y_test = clean_scale_dataset(create_dataset()[0], create_dataset()[1])
@@ -13,5 +13,6 @@ def main():
     
 if __name__ == "__main__" :
     main()
+
 
 
